@@ -6,14 +6,14 @@ pipeline {
   	}
 
 	stages {
-		stage('Build') {
+		stage('Building') {
 			steps {
 			    container('maven8') {
 				sh 'mvn clean package'
 			    }
 			}
 		}
-		stage('Test') {
+		stage('Testing') {
 			steps {
 				echo 'Test our code'
 			}
